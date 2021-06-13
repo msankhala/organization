@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.organization.field_number_of_employees
+    - field.field.user.organization.field_organization_address
+    - field.field.user.organization.field_organization_name
+    - field.field.user.organization.field_organization_phone
+    - field.field.user.organization.field_website
+    - user_bundle.user_type.organization
+  module:
+    - address
+    - link
+    - telephone
+id: user.organization.default
+targetEntityType: user
+bundle: organization
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_number_of_employees:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_organization_address:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_organization_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organization_phone:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_website:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  contact: true
+  customer_profiles: true
+  language: true
+  timezone: true

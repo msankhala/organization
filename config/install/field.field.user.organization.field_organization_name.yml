@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_organization_name
+    - user_bundle.user_type.organization
+id: user.organization.field_organization_name
+field_name: field_organization_name
+entity_type: user
+bundle: organization
+label: 'Organization Name'
+description: 'Please enter the organization''s name. e.g., <em>Walmart Company PVT LTD<em>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
