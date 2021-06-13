@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains organization.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function organization_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the organization module.
+    case 'help.page.organization':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides the Organization type user. That can be managed separately just like normal drupal user with some extra fields.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function organization_theme() {
+  return [
+    'organization' => [
+      'render element' => 'children',
+    ],
+  ];
+}

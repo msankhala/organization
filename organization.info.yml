@@ -1,0 +1,7 @@
+name: 'Organization'
+type: module
+description: 'Provides the Organization type user. That can be managed separately just like normal drupal user with some extra fields.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - user_bundle
